@@ -16,9 +16,15 @@
 package com.example.dogglers.adapter
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dogglers.R
+import com.example.dogglers.data.DataSource
+import com.example.dogglers.model.Dog
 
 /**
  * Adapter to inflate the appropriate list item layout and populate the view with information
@@ -30,18 +36,32 @@ class DogCardAdapter(
 ): RecyclerView.Adapter<DogCardAdapter.DogCardViewHolder>() {
 
     // TODO: Initialize the data using the List found in data/DataSource
-
+    val dogsList: List<Dog> = DataSource.dogs
     /**
      * Initialize view elements
      */
     class DogCardViewHolder(view: View?): RecyclerView.ViewHolder(view!!) {
         // TODO: Declare and initialize all of the list item UI components
+        val imageView: ImageView = view!!.findViewById(R.id.dog_image_view)
+        val nameView: TextView = view!!.findViewById(R.id.name_textview)
+        val ageView: TextView = view!!.findViewById(R.id.age_textview)
+        val hobbiesView: TextView = view!!.findViewById(R.id.hobbies_textview)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DogCardViewHolder {
         // TODO: Use a conditional to determine the layout type and set it accordingly.
         //  if the layout variable is Layout.GRID the grid list item should be used. Otherwise the
         //  the vertical/horizontal list item should be used.
+        return when (layout) {
+            1, 2 -> {
+                val adapterLayout = LayoutInflater.from(parent.context).inflate(R.layout.vertical_horizontal_list_item, parent, false)
+                DogCardViewHolder(adapterLayout)
+            }
+            else -> {
+                val adapterLayout = LayoutInflater.from(parent.context).inflate(R.layout.grid_list_item, parent, false)
+                DogCardViewHolder(adapterLayout)
+            }
+        }
 
         // TODO Inflate the layout
 
