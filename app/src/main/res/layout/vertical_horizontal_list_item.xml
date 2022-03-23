@@ -31,6 +31,13 @@
         <!-- TODO: Note that, unlike the grid view list, one card in the vertical and horizontal
                lists effectively take up the width of the screen. This means you have more
                room to display information spanning the width of the card.-->
+        <ImageView
+            android:id="@+id/dog_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:importantForAccessibility="no"/>
 
         <!-- TODO: Create an ImageView resource for the image of the dog.
                The height should be 194dp
