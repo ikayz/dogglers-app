@@ -1772,6 +1772,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id age_textview
 id alertTitle
 id aligned
 id all
@@ -1844,6 +1845,7 @@ id disableHome
 id disablePostScroll
 id disableScroll
 id disjoint
+id dog_image_view
 id dragDown
 id dragEnd
 id dragLeft
@@ -1888,6 +1890,7 @@ id groups
 id guideline
 id header_title
 id hideable
+id hobbies_textview
 id home
 id homeAsUp
 id honorRequest
@@ -1972,6 +1975,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id name_textview
 id navigation_header_container
 id never
 id noScroll
